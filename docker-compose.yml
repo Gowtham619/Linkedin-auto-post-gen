@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  ai-content-agent:
+    build: .
+    container_name: ai-content-agent-perplexity
+    restart: unless-stopped
+    env_file:
+      - config/.env
+    volumes:
+      - ./content:/app/content
+      - ./logs:/app/logs
+      - ./config:/app/config:ro
+    environment:
+      - TZ=UTC
+      - PYTHONUNBUFFERED=1
+    healthcheck:
+      test: ["CMD", "python", "-c", "import os; exit(0 if os.path.exists('/app/logs/agent.log') else 1)"]
+      interval: 30m
+      timeout: 10s
+      retries: 3
+      start_period: 1m
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
