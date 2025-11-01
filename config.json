@@ -1,0 +1,63 @@
+{
+  "agent_settings": {
+    "post_interval_hours": 6,
+    "platforms": ["linkedin", "medium"],
+    "content_style": "human-like",
+    "max_content_length": {
+      "linkedin": 3000,
+      "medium": 2500
+    }
+  },
+  "research_settings": {
+    "queries_per_cycle": 3,
+    "research_depth": "deep",
+    "topics": [
+      "Latest AI developments and breakthroughs",
+      "Machine learning practical applications",
+      "Generative AI in business",
+      "AI ethics and responsible AI",
+      "AI automation and productivity",
+      "Future trends in artificial intelligence",
+      "AI regulations and governance",
+      "LLMs and language models evolution",
+      "AI agents and autonomous systems",
+      "Computer vision applications",
+      "AI in healthcare and medicine",
+      "Natural language processing advances",
+      "AI for software development",
+      "Enterprise AI adoption challenges",
+      "Open source AI models"
+    ]
+  },
+  "content_guidelines": {
+    "tone": "professional yet conversational, authentic, enthusiastic",
+    "avoid_phrases": [
+      "delve into",
+      "tapestry",
+      "landscape",
+      "revolutionary",
+      "game-changing",
+      "paradigm shift",
+      "unlock the potential",
+      "at the end of the day",
+      "cutting-edge",
+      "unprecedented",
+      "transformative journey"
+    ],
+    "include_elements": [
+      "personal insights and perspectives",
+      "real-world examples and case studies",
+      "actionable takeaways and recommendations",
+      "engaging rhetorical questions",
+      "specific data points when relevant",
+      "practical implementation tips",
+      "honest challenges and limitations"
+    ]
+  },
+  "api_settings": {
+    "provider": "perplexity",
+    "model": "claude-3.5-sonnet",
+    "max_tokens": 3000,
+    "temperature": 0.7
+  }
+}
